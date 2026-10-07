@@ -1,5 +1,5 @@
 # 🌲 Amazon Forest — AWS 2-Tier Architecture
-<p align="center"><img src="figures/diagram.png" width="600"/></p>
+<p align="center"><img src="Figures/diagram.png" width="600"/></p>
 ## Overview
 Replication of the LearningSteps two-tier architecture on **Amazon Web Services** to validate cross-platform cloud security skills. This project represents Part 2 of a three-part cloud security series.
 
