@@ -61,3 +61,45 @@ Deploy the same FastAPI + PostgreSQL journal application on AWS with identical s
    ```bash
    sudo apt update && sudo apt install -y postgresql postgresql-contrib
    sudo systemctl enable --now postgresql
+   ```
+   - Modified postgresql.conf: listen_addresses = '*'
+   - Modified pg_hba.conf: host all all 10.0.0.0/24 scram-sha-256
+
+4. **Web Server Setup**
+   ```bash
+      git clone -b reference https://github.com/roman-cybersteps/learningsteps.git
+   mv .env-sample .env
+   source venv/bin/activate
+   sudo ./start.sh
+   ```
+## ⚠️ Challenges Solved
+
+| **Challenge** | **Root Cause** | **Solution** |
+| :-: | :-: | :-: |
+| **No internet on database instance** | Elastic IP not attached | Attached Elastic IP temporarily to download packages, detached after installation |
+| **venv symlinking to wrong python version** | `/usr/bin/python3` → not `/usr/bin/python3.14` | Regenerated venv: `/usr/bin/python3.14 -m venv venv` |
+
+
+## 💡 Key Learnings
+
+> Knowing one cloud provider gives you the foundation to work across others. It's a matter of understanding naming conventions, but the most important skill is understanding **two/three-tier architecture patterns**, networking, subnets, and isolation — regardless of the platform.
+
+
+## 📊 Multi-Cloud Competence
+
+| **Skill** | **Azure** | **AWS** |
+| :-: | :-: | :-: |
+| Virtual Networking | ✅ VNet | ✅ VPC |
+| Security Controls | ✅ NSGs | ✅ Security Groups |
+| Compute | ✅ VMs | ✅ EC2 |
+| Key Management | ✅ SSH Keys | ✅ SSH Keys + IAM |
+| Static IPs | ✅ Public IP | ✅ Elastic IP |
+
+
+## 🔗 Related Projects
+
+- **Phase 1 (Azure):** [LearningSteps — Origins](https://github.com/e-Itohan/learningsteps-origins) 
+
+- **Phase 3 (DevSecOps):** [LearningSteps — Evolution](https://github.com/e-Itohan/learningsteps-evolution) 
+
+
