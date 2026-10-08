@@ -102,4 +102,5 @@ Deploy the same FastAPI + PostgreSQL journal application on AWS with identical s
 
 - **Phase 3 (DevSecOps):** [LearningSteps — Evolution](https://github.com/e-Itohan/learningsteps-evolution) 
 
-
+## 📃 Full Report
+[View](https://github.com/e-Itohan/e-Itohan/blob/main/reports/The_Amazon_Forest.pdf)
